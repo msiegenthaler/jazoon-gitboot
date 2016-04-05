@@ -1,6 +1,5 @@
 <ul>
-  <li>{{link-to "Emberjs" 'org.repos' 0}}</li>
-  <li>{{link-to "JQuery" 'org.repos' 0}}</li>
-  <li>{{link-to "Facebook" 'org.repos' 0}}</li>
-  <li>{{link-to "Netflix" 'org.repos' 0}}</li>
+  {{#each model as |org|}}
+    <li>{{link-to org.id 'org.repos' org.id}}</li>
+  {{/each}}
 </ul>

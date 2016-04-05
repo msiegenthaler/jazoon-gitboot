@@ -1,3 +1,4 @@
+@import "container.css";
 body {
   background: #39f;
   margin: 0;
@@ -7,39 +8,18 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
-.container {
-  background: #fff;
-  padding: 20px;
-  padding-bottom: 40px;
-  border-bottom: 1px solid #03f;
-  box-shadow: 0 -15px 20px 20px rgba(0,0,0,0.3);
+.repos {
+  list-style: none;
 }
 
-h1 {
-  margin-top: 0;
-  padding-top: 10px;
+.repos li i.material-icons {
+  position: relative;
+  color: #666;
+  transition: color 0.2s, left 0.2s;
+  left: 0;
+  top: 5px;
 }
-
-@media (max-width: 599px){
-  .container {
-    width: calc(100% - 60px);
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-}
-
-@media (min-width: 600px) and (max-width: 959px) {
-  .container {
-    margin-left: calc(50% - 320px);
-    margin-right: calc(50% - 320px);
-    width: 600px;
-  }
-}
-
-@media (min-width: 960px) {
-  .container {
-    margin-left: calc(50% - 470px);
-    margin-right: calc(50% - 470px);
-    width: 900px;
-  }
+.repos li:hover i.material-icons {
+  color: #000;
+  left: -2px;
 }

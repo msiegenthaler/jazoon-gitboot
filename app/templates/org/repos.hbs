@@ -1,6 +1,14 @@
-<h1>Ember Repositories</h1>
-<ul>
-  <li>{{link-to "Repository 1" 'org.repo' 0}}</li>
-  <li>{{link-to "Repository 2" 'org.repo' 0}}</li>
+<h1>{{org.id}} Repositories</h1>
+<ul class='repos'>
+  {{#each model as |repo index|}}
+    <li>
+      <i class="material-icons">
+        star_border
+      </i>
+      {{#link-to 'org.repo' repo.id}}
+        {{repo.id}}
+      {{/link-to}}
+    </li>
+  {{/each}}
 </ul>
 {{outlet}}
