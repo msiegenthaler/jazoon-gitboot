@@ -5,11 +5,6 @@ const Router = Ember.Router.extend({
   location: config.locationType
 });
 
-Router.map(function() {
-  this.route('org', {path: 'org/:organization_id'}, function() {
-    this.route('repos', {path: 'repos'});
-    this.route('repo', {path: 'repo/:repository_id'});
-  });
-});
+Router.map(function() {});
 
 export default Router;
