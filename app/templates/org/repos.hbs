@@ -2,7 +2,7 @@
 <ul class='repos'>
   {{#each model as |repo index|}}
     <li>
-      <i class="material-icons">
+      <i class="material-icons" onclick={{action 'repoFavorited' repo}}>
         star_border
       </i>
       {{#link-to 'org.repo' repo.id}}
