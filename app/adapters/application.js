@@ -1,8 +1,8 @@
 import DS from 'ember-data';
 
 export default DS.JSONAPIAdapter.extend({
-  // host: 'https://emberconf-state-api.herokuapp.com',
-  host: 'http://localhost:4000',
+  host: 'https://emberconf-state-api.herokuapp.com',
+  // host: 'http://localhost:4000',
   namespace: 'api',
   ajaxOptions() {
     let hash = this._super(...arguments);
