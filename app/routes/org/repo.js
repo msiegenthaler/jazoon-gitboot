@@ -1,11 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model: function () {
+  model() {
     return {id: 'emberjs'};
   },
 
-  setupController: function(controller) {
+  setupController(controller) {
     this._super(...arguments);
     controller.set('org', this.modelFor('org'));
   }
