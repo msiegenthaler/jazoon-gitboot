@@ -1,21 +1,18 @@
 import Ember from 'ember';
 
 export default Ember.Service.extend({
-  items: null,
-
   init() {
     this._super(...arguments);
     this.set('items', []);
   },
 
   toggle(repoId) {
-    if (this.get('items').contains(repoId)) {
-      this.get('items').pop(repoId);
-      console.log("Removing "+repoId);
+    const items = this.get('items');
+    if (items.contains(repoId)) {
+      items.popObject(repoId);
     } else {
-      this.get('items').push(repoId);
-      console.log("Adding "+repoId);
+      items.pushObject(repoId);
     }
-    console.log("Favorites: "+this.get('items'));
+    console.log("Favorites: " + items.join(", "));
   }
 });
