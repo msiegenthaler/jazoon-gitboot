@@ -11,6 +11,7 @@ Router.map(function() {
     this.route('repo', {path: "repo/:repo"}, function() {});
     this.route('no-repo');
   });
+  this.route('loading');
 });
 
 export default Router;
