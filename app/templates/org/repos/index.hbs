@@ -3,7 +3,7 @@
   {{#each content as |repo index|}}
     <li class="repos">
       <i class="material-icons" onclick={{action 'favorite' repo.id}}>star_border</i>
-      {{link-to repo.id "org.repo" index}}
+      {{link-to repo.name "org.repo" index}}
     </li>
   {{/each}}
 </ul>
