@@ -5,20 +5,10 @@ moduleForComponent('github-org', 'Integration | Component | github org', {
   integration: true
 });
 
-test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+test('it renders the name and the star icon', function(assert) {
+  this.set('repo', {id: 1, name: 'Test'});
+  this.render(hbs`{{github-org repo=repo}}`);
 
-  this.render(hbs`{{github-org}}`);
-
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#github-org}}
-      template block text
-    {{/github-org}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$('.material-icons').text().trim(), 'star_border');
+  assert.equal(this.$('a').text().trim(), 'Test');
 });
