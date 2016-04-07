@@ -5,7 +5,7 @@ export function niceNumber(params/*, hash*/) {
   if (number < 1000) {
     return number;
   } else {
-    return Math.round(number / 1000) + "K";
+    return Math.round(number / 100)/10.0 + "K";
   }
 }
 

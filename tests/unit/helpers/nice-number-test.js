@@ -22,9 +22,13 @@ test('it returns 1K for 1005', function(assert) {
 });
 test('it returns 2K for 1905', function(assert) {
   let result = niceNumber([1905]);
-  assert.equal(result, "2K");
+  assert.equal(result, "1.9K");
 });
-test('it returns 42K for 42134', function(assert) {
-  let result = niceNumber([42123]);
+test('it returns 42K for 42034', function(assert) {
+  let result = niceNumber([42034]);
   assert.equal(result, "42K");
+});
+test('it returns 42.1K for 42134', function(assert) {
+  let result = niceNumber([42134]);
+  assert.equal(result, "42.1K");
 });
