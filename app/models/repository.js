@@ -5,5 +5,6 @@ export default DS.Model.extend({
   description: DS.attr(),
   homepage: DS.attr(),
   'stargazers-count': DS.attr(),
+  'watchers-count': DS.attr(),
   organization: DS.belongsTo('organization')
 });
