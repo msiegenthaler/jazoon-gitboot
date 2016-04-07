@@ -1,3 +1,14 @@
-{{model.description}}
+<p>
+  {{model.description}}
+</p>
+<p>
+  <i class="material-icons">star</i> {{model.stargazers-count}}
+</p>
+
+<p>
+  {{#if model.homepage}}
+    <a href="{{model.homepage}}">Homepage</a>
+  {{/if}}
+</p>
 
 {{outlet}}
