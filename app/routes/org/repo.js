@@ -1,8 +1,16 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model() {
-    return {id: 'emberjs'};
+  model(params) {
+    const org = this.modelFor('org').id;
+    return fetch(`https://emberconf-state-api.herokuapp.com/api/organizations/${org}/repositories/${params.repo}`)
+      .then(d => d.json())
+      .then(json => {
+        return {
+          id: json.data.id,
+          name: json.data.attributes.name
+        };
+      });
   },
 
   setupController(controller) {

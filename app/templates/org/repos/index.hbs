@@ -1,9 +1,9 @@
 <h1>{{org.name}} Repositories</h1>
 <ul>
-  {{#each content as |repo index|}}
+  {{#each content as |repo|}}
     <li class="repos">
       <i class="material-icons" onclick={{action 'favorite' repo.id}}>star_border</i>
-      {{link-to repo.name "org.repo" index}}
+      {{link-to repo.name "org.repo" repo.id}}
     </li>
   {{/each}}
 </ul>
