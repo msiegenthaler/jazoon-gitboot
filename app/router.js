@@ -12,6 +12,7 @@ Router.map(function() {
     this.route('no-repo');
   });
   this.route('loading');
+  this.route('error');
 });
 
 export default Router;
