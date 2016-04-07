@@ -6,6 +6,10 @@ export default Ember.Service.extend({
     this.set('items', []);
   },
 
+  isFavorite(repoId) {
+    return this.get('items').contains(repoId);
+  },
+
   toggle(repoId) {
     const items = this.get('items');
     if (items.contains(repoId)) {
@@ -13,6 +17,5 @@ export default Ember.Service.extend({
     } else {
       items.pushObject(repoId);
     }
-    console.log("Favorites: " + items.join(", "));
   }
 });

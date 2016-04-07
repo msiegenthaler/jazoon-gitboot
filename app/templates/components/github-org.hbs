@@ -1,5 +1,10 @@
-<i class="material-icons" onclick={{action 'favorite' repo.id}}>star_border</i>
-
+<i class="material-icons" onclick={{action 'favorite' repo.id}}>
+  {{#if isFavorited}}
+    start
+  {{else}}
+    star_border
+  {{/if}}
+</i>
 {{link-to repo.name "org.repo" repo.id}}
 
 ({{nice-number repo.stargazers-count}} stars,
