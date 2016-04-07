@@ -1,16 +1,11 @@
 <ul>
-  <li>
-    {{link-to "Ember" "org.repos" 0}}
-  </li>
-  <li>
-    {{link-to "JQuery" "org.repos" 1}}
-  </li>
-  <li>
-    {{link-to "Facebook" "org.repos" 2}}
-  </li>
-  <li>
-    {{link-to "Netflix" "org.repos" 3}}
-  </li>
+  {{#each content as |org index|}}
+    <li>
+      {{#link-to "org.repos" index}}
+        {{org.id}}
+      {{/link-to}}
+    </li>
+  {{/each}}
 </ul>
 
 {{outlet}}
