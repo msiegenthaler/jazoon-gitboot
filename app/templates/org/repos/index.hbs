@@ -2,6 +2,7 @@
 <ul>
   {{#each content as |repo index|}}
     <li>
+      <i class="material-icons" onclick={{action 'favorite' repo.id}}>star_border</i>
       {{#link-to "org.repo" index}}
         ({{index}}) {{repo.id}}
       {{/link-to}}
