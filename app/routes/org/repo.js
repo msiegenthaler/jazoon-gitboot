@@ -8,5 +8,11 @@ export default Ember.Route.extend({
   setupController(controller) {
     this._super(...arguments);
     controller.set('org', this.modelFor('org'));
+  },
+
+  actions: {
+    error() {
+      return this.intermediateTransitionTo("org.no-repo");
+    }
   }
 });
